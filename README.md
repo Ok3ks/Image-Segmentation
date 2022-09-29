@@ -2,16 +2,16 @@
 This project required the matching of submitted colour patterns as an image to the standard colour pattern to be used in a game
 
 
-*Abstract*/
+*Abstract*
 
 This is a report about the process of building an image processing application for a game. The game requires players to reconstruct images from memory after being shown an image for a short period of time. The aim of the application is to interpret and compare brick patterns created by the player against original brick patterns. The methods employed in building this application includes thresholding and colour segmentation using hue values. Images were preprocessed by denoising and filtering with a gaussian filter.Distorted images were corrected using coordinates of the black circles as anchors.
 Results obtained showing an overall 83.3% accuracy in the function. Challenges faced were the incorrect representation of green and yellow in certain images. Application will perform better with presence of less noise in images.
 
-*Introduction*/
+*Introduction*
 
 This is an Image processing application for a game - Lego’s life of George. Lego’s life of George is a game where the player is required to reconstruct a block from memory after being shown an image for a short period of time. The aim of this image processing application is to process the image reconstructed by the player. By processing the reconstructed image, it can be compared for correctness with the correct image. The basic requirement of this application is that the brick patterns from an image be correctly interpreted despite limiting circumstances. Limiting circumstances can include the possible conditions of the submitted image. Conditions such as image lighting, noise,certain degrees of rotation and camera angles(perspective from which the player captures the image), distracting background can be a barrier to the correct interpretation of colours present in the image.This application was created using the image processing toolbox in MATLAB.
 
-*Methods*/
+*Methods*
 
 This section gives an overview and description of the techniques used in the creation of this application. Design decisions are explained and possible methods to improve performance. A family function colourMatrix employs smaller functions which carry out independent tasks. These smaller functions are loadImage, removeSmallElements, smoothedChannels, findCircles, correctImage and findColour. MATLAB functions are present in Appendix A.2.
 Function loadImage
